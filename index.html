@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Petri Heinämäki / "Hakaponttoauto"</title>
+  <meta name="author" content="Petri Heinämäki">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/421afba2b1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header"><h1>Petri Heinämäki / "Hakaponttoauto"</h1></div>
+  <div id="contact">
+    <div class="social-cont"><span class="social fa fa-envelope"></span><div class="social-text">Sähköposti:<br>haka.pontto.auto@gmail.com</div></div>
+    <div class="social-cont"><span class="social fab fa-discord"></span><div class="social-text">Discord:<br>Hakaponttoauto#4284</div></div>
+    <div class="social-cont"><a href="https://t.me/Hakaponttoauto" class="social fa fa-telegram" target="_blank"></a><div class="social-text">Telegram:<br>t.me/hakaponttoauto</div></div>
+    <div class="social-cont"><a href="https://github.com/Hakaponttoauto/" class="social fa fa-github" target="_blank"></a><div class="social-text">Github:<br>Hakaponttoauto</div></div>
+    <div class="social-cont"><a href="https://hakaponttoauto.itch.io" class="social fab fa-itch-io" target="_blank"></a><div class="social-text">Itch.io:<br>Hakaponttoauto</div></div>
+    <div class="social-cont"><a href="/publickey.asc" class="social fa fa-key"></a><div class="social-text">PGP Public Key:<br>Petri Heinämäki</div></div>
+
+  </div>
+  <div id="info" class="cont">
+    <div class="text">
+      <h1>Tervehdys!</h1>
+      <p>Olen Petri Heinämäki, alias Hakaponttoauto. Kiva tavata sinut.</p>
+      <p>Koodaan. Osaamani kielet ovat mm. Javascript, PHP, Lua ja Python. Myös nettisivut luonnistuvat, eli mukaan luetaan HTML ja CSS.</p>
+      <p>ÄO:ni on 140.<sup>[Citation needed]</sup></p>
+      <p>Suurin osa projekteistani on näkyvillä Githubissa tai Itchissä, mutta tässä on muutamia esittelyn arvoisia:</p>
+    </div>
+    <img src="images/haka.svg">
+  </div>
+  <div id="projects">
+    <div class="project cont">
+      <div class="text">
+        <h2>Matho:</h2>
+        <p>Matho on laskin, suunniteltu pääasiassa helpottamaan lukiolaisen elämääni. Speedcrunch-tyylinen käyttöliittymä, mutta abitin latex-editorilla. Täydellinen yhdistelmä.</p>
+        <p>Matho on tehty käyttäen NodeJS:ää sekä Electronia.</p>
+        <p>Jos kiinnostuit, Mathon löytää osoitteesta <a href="https://hakaponttoauto.itch.io/matho" target="_blank">https://hakaponttoauto.itch.io/matho</a> parhaiten.</p>
+      </div>
+      <img class="screenshot" src="images/matho.png">
+    </div>
+    <div class="project cont">
+      <div class="text">
+        <h2>3D-raytracing-moottori vokselimaastolla:</h2>
+        <p>Pikainen kokeiluprojekti. FPS-ohjauksilla toimiva pieni demo, jossa on kauniit raytracing-grafiikat (joita en tosin hyödyntänyt niin näyttävästi kuin voisi), ja täysin muokattavissa oleva pikkuisista vokseleista koostuva maasto.</p>
+        <p>Käytin toteuttamiseen Luaa ja Löve2D-pelimoottoria.</p>
+        <p>Valitettavasti projektia ei ole saatavilla tällä hetkellä, enkä harkitse sen julkaisuakaan.</p>
+      </div>
+      <img class="screenshot" src="images/raytracer.png">
+    </div>
+    <div class="project cont">
+      <div class="text">
+        <h2>Suapinratio:</h2>
+        <p>Saabismin kanssa tehty projekti, jossa käyttöliittymä oli pääosin Saabismin vastuulla ja toiminta minun. Saab-teemainen musiikkisoitin, joka hakee kappaleet youtubesta.</p>
+        <p>Tähänkin käytimme Electronia.</p>
+        <p>Suapinration saa ladattua koneellensa (vaivoin) osoitteesta <a href="https://github.com/saabismi/SuapinRatio" target="_blank">https://github.com/saabismi/SuapinRatio</a></p>
+      </div>
+      <img class="screenshot" src="images/suapinratio.png">
+    </div>
+  </div>
+  <center>&copy;2021 Petri Heinämäki</center>
+  <div id="myModal" class="modal">
+    <span id="close" class="close fa fa-window-close"></span>
+    <img class="modal-content" id="modal-image">
+  </div>
+</body>
+
+<script>
+  let modal = document.getElementById("myModal");
+  let content = document.getElementById("modal-image");
+
+  document.addEventListener("click", (e) => {
+    if (e.target.src) {
+      modal.style.display = "block";
+      content.src = e.target.src;
+    } else {
+      modal.style.display = "none";
+    }
+  });
+
+  document.getElementsById("close").onclick = function() {
+    modal.style.display = "none";
+  } 
+</script>
+
+</html>
