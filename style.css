@@ -62,16 +62,25 @@ sup {
     font-size: 4em;
     transition: color 0.1s;
     text-shadow: 1px 1px 16px white;
+    position: relative;
+    right: 100%;
 }
 
-.social:hover, .social:has(.social-text:hover) {
-    color: rgb(0, 138, 156)
+.social:hover, .social-text:hover + .social, .social-cont:hover > .social {
+    color: rgb(0, 138, 156);
+    right: 0%;
 }
 
 .social-cont {
     text-align: right;
     vertical-align: middle;
     height: 4em;
+    position: relative;
+    right: -100%;
+}
+
+.social-cont:hover {
+    right: 0%;
 }
 
 .social-text {
