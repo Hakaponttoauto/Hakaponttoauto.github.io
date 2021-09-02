@@ -64,7 +64,7 @@ sup {
     text-shadow: 1px 1px 16px white;
 }
 
-.social:hover, .social-text:hover + .social, .social-cont:hover > .social {
+.social:hover, .social:has(.social-text:hover) {
     color: rgb(0, 138, 156)
 }
 
